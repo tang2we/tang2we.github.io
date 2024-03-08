@@ -87,6 +87,15 @@ span{
 section{
   padding: 70px 16% 60px;
 }
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
 .home{
   position:relative;
   height: 100vh;
@@ -118,6 +127,14 @@ section{
   line-height: 30px;
   color: #ffffffab;
   margin-bottom: 35px;
+}
+.profile {
+  display: grid;
+  place-items: center;
+}
+.profile img{
+  width: min(50rem, 90%);
+  border-radius: 100%;
 }
 .btn{
   display: inline-block;
@@ -175,6 +192,90 @@ header.sticky{
 }
 .feature-content h4:hover{
   color: var(--main-color);
+}
+.slider{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+  overflow: hidden;
+}
+.slides input{
+  display: none;
+}
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+/* manual slide navigation*/
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+.manual-btn:hover{
+  background: #40D3DC;
+}
+#radio1:checked ~.first{
+  margin-left: 0;
+}
+#radio2:checked ~.first{
+  margin-left: -20%;
+}
+#radio3:checked ~.first{
+  margin-left: -40%;
+}
+#radio4:checked ~.first{
+  margin-left: -60%;
+}
+/*automatic navigation*/
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+.navigation-auto div{
+  border:2px solid #40D3DC;
+  padding: 8px;
+  border-radius:10px;
+  transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+  margin-right:40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
 }
 .holiday{
   display: grid;
