@@ -14,7 +14,7 @@
   --bg-color: #000;
   --main-color: #ffa343;
 
-  --h1-font: 6rem;
+  --h1-font: 5frem;
   --h2-font: 3rem;
   --p-font: 1rem;
 }
@@ -573,4 +573,29 @@ header.sticky{
   section{
     padding: 60px 3% 50px;
   }
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact h2{
+  font-size: var(--h2-font);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.contact a:first-child{
+  color: var(--text-color);
+  font-size: var(--p-font);
+  margin-right: 20px;
+}
+.contact a{
+  vertical-align: middle;
+  font-size: 30px;
+  color: var(--text-color);
+  margin-right: 18px;
+  margin-left: 5px;
 }
